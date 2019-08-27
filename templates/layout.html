@@ -1,0 +1,19 @@
+<!doctype html>
+<title>Twitter</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h1>Twitter</h1>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+
+    </div>
+  </div>
+</nav>
+<div class="main-body">
+  <div class="container">
+    {% block body %}{% endblock %}
+  </div>
+</div>

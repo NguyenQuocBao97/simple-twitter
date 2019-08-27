@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+  <form method="post">
+  	<div class="form-group">
+      <input class="form-control" type="text" name="tweet" placeholder="What are you thinking?">
+    </div>
+{#    <button class="btn btn-default" type="submit">Post</button>#}
+  </form>
+  {% for post in timeline %}
+    <li class="tweet" id={{ post.id }}>
+    <div> <b>{{ post.id }}</b>
+        <div><b>{{ post.user_name }}</b> posted at <b>{{ post.created_at }}</b></div>
+        <div>"{{ post.body }}" with number of retweet: <b>{{ post.count_retweet }}</b></div>
+        <div>
+            {% if post.retweet %}
+                Have retweeted post <b>{{ post.retweet }}</b>
+            {% else %}
+            {% endif %}
+        </div>
+    </div>
+    </li>
+  {% else %}
+    <h2>No posts!</h2>
+  {% endfor %}
+{% endblock %}
