@@ -42,12 +42,15 @@ Demo:
   "user_name": "baonq",
   "title": "What a day",
   "body": "All the contents go here",
-  "retweet": "###With an ID goes here"
+  "retweet": "###With an ID goes here",
   "count_retweet": 0
 }
 ```
 - Field `retweet` is an `id` of Tweet which can be found in response of `POST /tweet`
 - The code will loop all the elements in linked list and increase the `count_retweet` by 1 for every `Tweet` in that list which can be found in `models/Tweet.increase_counter()`
+
+- See all top 10 tweets with order in link: http://127.0.0.1:5000/
+
 
 To scale up:
 - Although there are a lot of methodology to scale up the server when data are getting bigger than the available memory, I think this could work around with 2 ways:
